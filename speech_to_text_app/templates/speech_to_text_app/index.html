@@ -1,0 +1,9 @@
+<h1>Convert Speech to Text!</h1>
+<p>Upload an audio file below, then click "Convert" to get a text file with the transcription of the video.</p>
+
+<form id="upload_form" action="{% url 'submit_file' %}" method="POST">
+    {% csrf_token %}
+    <label for="audio_file">Please select an audio file.</label>
+    <input type="file" name="audio_file" name="audio_file" />
+    <button type="submit" value={{submit_file}}>Submit</button>
+</form>
